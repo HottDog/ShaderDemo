@@ -1,0 +1,26 @@
+{
+  "Set": "SET 施法者:0 目标:6 VALUE=SUB_HP:12.1 ",
+  "Boot": "BEHAVIOR_EFFECT PLAYABLE_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill01/Sp002Skill01Swing.playable ASSET_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill01/Sp002Skill01Swing.prefab ROLE_SELF:$施法者 CAMERA:-1 ",
+  "FrameInfos": [
+    {
+      "Frame": 3,
+      "Command": "EVENT_MOV POS_OFFSET_X:0 POS_OFFSET_Y:0 POS_OFFSET_Z:0 ROLE_TARGET:$目标 POS_TARGET:1 ROLE_SELF:$施法者 BONE_PATH: POS_SCENE:-1 TIME_MOV:0.233333333333333 "
+    },
+    {
+      "Frame": 15,
+      "Command": "PLAY_EFFECT PLAYABLE_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill01/Sp002Skill01Hit.playable POS_OFFSET_X:0 POS_OFFSET_Y:0.86 POS_OFFSET_Z:1.47 ASSET_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill01/Sp002Skill01Hit.prefab ROLE_SELF:$目标 POS_SCENE:-1 POS_SELF:3 CAMERA:-1 "
+    },
+    {
+      "Frame": 15,
+      "Command": "BEHAVIOR_ACTION PLAYABLE_PATH:Assets/Characters/Common/Action/Action.playable ROLE_ACTION:Hit ASSET_PATH:Assets/Characters/Common/Action/Action.prefab ROLE_SELF:$目标 "
+    },
+    {
+      "Frame": 15,
+      "Command": "EVENT_VAL ROLE_SELF:$目标 WEIGHT=SUB_HP:1 "
+    },
+    {
+      "Frame": 27,
+      "Command": "EVENT_MOV POS_OFFSET_X:0 POS_OFFSET_Y:0 POS_OFFSET_Z:0 ROLE_TARGET:$施法者 POS_TARGET:0 ROLE_SELF:$施法者 BONE_PATH: POS_SCENE:-1 TIME_MOV:0.3 "
+    }
+  ]
+}
