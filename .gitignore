@@ -1,0 +1,9 @@
+Temp/
+Library/
+Assets/Standard Assets/
+Assets/PostProcessing/Utilities/CustomMotionTexture/Textures/UVChecker.png
+Assets/PostProcessing/Utilities/CustomMotionTexture/Textures/DebugMotionVectors.png
+Assets/PostProcessing/
+Assets/PostProcessing.meta
+Assets/Standard Assets.meta
+.vs/
