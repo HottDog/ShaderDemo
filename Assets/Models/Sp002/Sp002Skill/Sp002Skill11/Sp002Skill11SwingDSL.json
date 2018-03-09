@@ -1,0 +1,10 @@
+{
+  "Set": "SET 施法者:0 VALUE=ADD_HP:12.1 ",
+  "Boot": "BEHAVIOR_EFFECT PLAYABLE_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill11/Sp002Skill11Swing.playable ASSET_PATH:Assets/Characters/Sp002/Sp002Skill/Sp002Skill11/Sp002Skill11Swing.prefab ROLE_SELF:$施法者 CAMERA:-1 ",
+  "FrameInfos": [
+    {
+      "Frame": 0,
+      "Command": "EVENT_VAL ROLE_SELF:$施法者 WEIGHT=ADD_HP:1 "
+    }
+  ]
+}

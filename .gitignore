@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Temp/
 Library/
 Assets/Standard Assets/
@@ -7,3 +8,15 @@ Assets/PostProcessing/
 Assets/PostProcessing.meta
 Assets/Standard Assets.meta
 .vs/
+=======
+Assets/PostProcessing/
+Assets/PostProcessing.meta
+Assets/Standard Assets.meta
+.vs/ShaderDemo/v15/Server/sqlite3/storage.ide
+.vs/ShaderDemo/v15/Server/sqlite3/db.lock
+Assets/Effects/post_processing.asset.meta
+Assets/Effects/post_processing.asset
+Assets/Standard Assets/
+Library/
+.vs/ShaderDemo/v15/Browse.VC.db
+>>>>>>> b68ea0be9a878a326377ca7af0578c804931aa13

@@ -7,8 +7,9 @@ Shader "Unlit/Fresnel"
 	    _fresnelBase("frsnelBase",Range(0,1)) = 1
 		_fresnelScale("fresnelScale",Range(0,1)) = 1
 		_fresnelIndensity("fresnelIndensity",Range(0,5)) = 5
-		//_fresnelCol("fresnelCol",Color) = (1,1,1,1)
-		_Cubemap("Reflection Cubemap",Cube) = "_Skybox"{}
+		_fresnelCol("fresnelCol",Color) = (1,1,1,1)
+		//_Cubemap("Reflection Cubemap",Cube) = "_Skybox"{}
+		//_fresnelColor("fresnelColor",Color)
 	}
 	SubShader
 	{
@@ -51,7 +52,7 @@ Shader "Unlit/Fresnel"
 			float _fresnelBase;
 			float _fresnelScale;
 			float _fresnelIndensity;
-			//float4 _fresnelCol;
+			float4 _fresnelCol;
 			samplerCUBE _Cubemap;
 			
 			v2f vert (appdata v)
@@ -80,7 +81,7 @@ Shader "Unlit/Fresnel"
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
 				//提取立方贴图中的颜色值
-				fixed4 _fresnelCol = texCUBE(_Cubemap, i.worldRefl);
+				//fixed4 _fresnelCol = texCUBE(_Cubemap, i.worldRefl);
 				//将向量转换成单元向量
 				float3 N = normalize(i.N);
 				float3 L = normalize(i.L);
@@ -90,7 +91,7 @@ Shader "Unlit/Fresnel"
 				//计算菲尼尔系数，菲尼尔公式
 				float fresnel = _fresnelBase + _fresnelScale*pow(1 - dot(N, V), _fresnelIndensity);
 				//将要给物体的光照的颜色以菲尼尔系数和顶点颜色向混合，并乘上被混合光照颜色的透明度
-				col.rgb += lerp(col.rgb, _fresnelCol, fresnel)*_fresnelCol.a;
+				col.rgb = lerp(col.rgb, _fresnelCol, fresnel)*_fresnelCol.a;
 				return col;
 			}
 			ENDCG
